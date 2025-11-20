@@ -21,6 +21,7 @@ jobs:
             npm install
             npm test
   create_docker_file:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     needs: run-npm-install
     steps:
