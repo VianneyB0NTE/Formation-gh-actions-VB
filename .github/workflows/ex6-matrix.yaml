@@ -1,4 +1,4 @@
-name: npm test
+name: npm test matrix
 on: 
   workflow_dispatch:
 
@@ -7,8 +7,11 @@ jobs:
   
     strategy:
       matrix:
-        version: [20, lts]
+        version: [20, lts/*]
         os: [ubuntu-latest, ubuntu-22.04]
+      include:
+      - version: 18
+        os: ubuntu-latest
     runs-on: ${{ matrix.os }}
     steps:
         - name: checkout
