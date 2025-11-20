@@ -1,0 +1,25 @@
+name: Reusable NPM Test Workflow
+
+on:
+  workflow_call:
+    inputs:
+      node-version:
+        required: false
+        type: string
+        default: 'lts/*'
+
+jobs:
+  run-npm-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ inputs.node-version }}
+      - name: Run Test
+        run: |
+          node -v
+          npm install
+          npm test
