@@ -6,6 +6,9 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps: 
-    - uses: actions/checkout@v5
-    - uses: actions/setup-node@v6
-    - run: npm install && npm test
+    - name: Checkout code
+      uses: actions/checkout@v5
+    - name: Setup Node.js
+      uses: actions/setup-node@v6
+    - name: Run install & tests
+      run: npm install && npm test
