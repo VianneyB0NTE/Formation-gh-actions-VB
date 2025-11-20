@@ -4,6 +4,6 @@ on:
 
 jobs:
   call-workflow-ex4-reusable:
-    uses: octo-org/this-repo/.github/workflows/ex4_reusable.yaml@main
+    uses: VianneyB0NTE/Formation-gh-actions-VB/.github/workflows/ex4_reusable.yaml@main
     with:
       node-version: 'lts/*'
