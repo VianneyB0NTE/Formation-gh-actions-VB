@@ -11,4 +11,6 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v6
     - name: Run install & tests
-      run: npm install && npm test
+      run: | 
+        npm install
+        npm test
