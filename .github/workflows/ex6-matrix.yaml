@@ -9,9 +9,9 @@ jobs:
       matrix:
         version: [20, lts/*]
         os: [ubuntu-latest, ubuntu-22.04]
-      include:
-      - version: 18
-        os: ubuntu-latest
+        include:
+        - version: 18
+          os: ubuntu-latest
     runs-on: ${{ matrix.os }}
     steps:
         - name: checkout
