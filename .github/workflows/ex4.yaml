@@ -1,0 +1,9 @@
+name: reusable workflow
+on:
+  workflow_dispatch:
+
+jobs:
+  call-workflow-ex4-reusable:
+    uses: octo-org/this-repo/.github/workflows/ex4_reusable.yaml@main
+    with:
+      node-version: 'lts/*'
